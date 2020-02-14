@@ -209,6 +209,8 @@ describe "Inspec::Resources::Port" do
     resource = MockLoader.new(:solaris11).load_resource("port", 22)
     _(resource.listening?).must_equal true
     _(resource.addresses).must_equal ["0.0.0.0"]
+    _(resource.pids).must_equal [668]
+    _(resource.processes).must_equal ["sshd"]
   end
 
   it "verify port on hpux" do
