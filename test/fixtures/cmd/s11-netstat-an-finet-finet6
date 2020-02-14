@@ -1,31 +1,127 @@
+
 UDP: IPv4
-   Local Address        Remote Address      State
--------------------- -------------------- ----------
-      *.*                                 Unbound
-10.0.2.15.68                              Idle
-192.168.59.103.68                         Idle
+   Local Address        Remote Address      User    Pid     State      Send Buf     TxOverflows     Recv Buf     RxOverflows      Command
+-------------------- -------------------- -------- ------ ---------- ------------ --------------- ------------ --------------- ----------------
+      *.*                                 root        142 Unbound           57344               0        57344               0 /lib/inet/in.mpathd
+      *.*                                 root        142 Unbound           57344               0        57344               0 /lib/inet/in.mpathd
+      *.*                                 root        142 Unbound           57344               0        57344               0 /lib/inet/in.mpathd
+      *.*                                 root        142 Unbound           57344               0        57344               0 /lib/inet/in.mpathd
+      *.*                                 root        158 Unbound           57344               0        57344               0 /lib/inet/in.ndpd
+      *.*                                 root        539 Unbound           57344               0        57344               0 /lib/inet/nwamd
+      *.*                                 root        539 Unbound           57344               0        57344               0 /lib/inet/nwamd
+      *.68                                netadm      568 Idle              57344               0        57344               0 /usr/sbin/dhcpagent
+      *.546                               netadm      568 Idle              57344               0        57344               0 /usr/sbin/dhcpagent
+10.0.2.15.68                              netadm      568 Idle              57344               0        57344               0 /usr/sbin/dhcpagent
+      *.111                               daemon     1246 Idle              57344               0        57344               0 /usr/sbin/rpcbind -w
+      *.*                                 daemon     1246 Unbound           57344               0        57344               0 /usr/sbin/rpcbind -w
+      *.42678                             daemon     1246 Idle              57344               0        57344               0 /usr/sbin/rpcbind -w
+      *.111                               daemon     1246 Idle              57344               0        57344               0 /usr/sbin/rpcbind -w
+      *.*                                 daemon     1246 Unbound           57344               0        57344               0 /usr/sbin/rpcbind -w
+      *.50095                             daemon     1246 Idle              57344               0        57344               0 /usr/sbin/rpcbind -w
+10.0.2.15.37050                           wlsadmin  14366 Idle              65535               0      1048576               0 /usr/java/bin/java -server -d64 -Xms256m -Xmx512m -cp /u01/oracle/middleware12c
+      *.123                               daemon     1824 Idle              57344               0        57344               0 /usr/lib/inet/ntpd --pidfile /var/run/ntp.pid --panicgate
+      *.123                               daemon     1824 Idle              57344               0        57344               0 /usr/lib/inet/ntpd --pidfile /var/run/ntp.pid --panicgate
+127.0.0.1.123                             daemon     1824 Idle              57344               0        57344               0 /usr/lib/inet/ntpd --pidfile /var/run/ntp.pid --panicgate
+10.0.2.15.123                             daemon     1824 Idle              57344               0        57344               0 /usr/lib/inet/ntpd --pidfile /var/run/ntp.pid --panicgate
+      *.7574                              wlsadmin  14366 Idle              65535               0      1048576               0 /usr/java/bin/java -server -d64 -Xms256m -Xmx512m -cp /u01/oracle/middleware12c
+192.168.33.33.123                         daemon     1824 Idle              57344               0        57344               0 /usr/lib/inet/ntpd --pidfile /var/run/ntp.pid --panicgate
 
 UDP: IPv6
-   Local Address                     Remote Address                   State      If
---------------------------------- --------------------------------- ---------- -----
-      *.*                                                           Unbound
-      *.546                                                         Idle
+   Local Address                     Remote Address                   User    Pid     State      If    Send Buf     TxOverflows     Recv Buf     RxOverflows      Command
+--------------------------------- --------------------------------- -------- ------ ---------- ----- ------------ --------------- ------------ --------------- ----------------
+      *.*                                                           root        142 Unbound                 57344               0        57344               0 /lib/inet/in.mpathd
+      *.*                                                           root        142 Unbound                 57344               0        57344               0 /lib/inet/in.mpathd
+      *.*                                                           root        158 Unbound                 57344               0        57344               0 /lib/inet/in.ndpd
+      *.*                                                           root        539 Unbound                 57344               0        57344               0 /lib/inet/nwamd
+      *.546                                                         netadm      568 Idle                    57344               0        57344               0 /usr/sbin/dhcpagent
+      *.111                                                         daemon     1246 Idle                    57344               0        57344               0 /usr/sbin/rpcbind -w
+      *.*                                                           daemon     1246 Unbound                 57344               0        57344               0 /usr/sbin/rpcbind -w
+      *.42678                                                       daemon     1246 Idle                    57344               0        57344               0 /usr/sbin/rpcbind -w
+      *.123                                                         daemon     1824 Idle                    57344               0        57344               0 /usr/lib/inet/ntpd --pidfile /var/run/ntp.pid --panicgate
+      *.7574                                                        wlsadmin  14366 Idle                    65535               0      1048576               0 /usr/java/bin/java -server -d64 -Xms256m -Xmx512m -cp /u01/oracle/middleware12c
+::1.123                                                             daemon     1824 Idle                    57344               0        57344               0 /usr/lib/inet/ntpd --pidfile /var/run/ntp.pid --panicgate
+fe80::a00:27ff:fee0:70b4.123                                        daemon     1824 Idle       net0         57344               0        57344               0 /usr/lib/inet/ntpd --pidfile /var/run/ntp.pid --panicgate
 
 TCP: IPv4
-   Local Address        Remote Address     Swind  Send-Q  Rwind  Recv-Q    State
--------------------- -------------------- ------- ------ ------- ------ -----------
-127.0.0.1.5999             *.*                  0      0  128000      0 LISTEN
-      *.111                *.*                  0      0  128000      0 LISTEN
-      *.*                  *.*                  0      0  128000      0 IDLE
-      *.111                *.*                  0      0  128000      0 LISTEN
-      *.*                  *.*                  0      0  128000      0 IDLE
-192.168.59.103.22    192.168.59.3.55016    131008      0  128872      0 ESTABLISHED
-      *.22                 *.*                  0      0  128000      0 LISTEN
-      *.22                 *.*                  0      0  128000      0 LISTEN
+Local/Remote Address  Swind   Snext     Suna    Rwind   Rnext     Rack    Rto   Mss     State      User    Pid      Command
+-------------------- ------- -------- -------- ------- -------- -------- ----- ----- ----------- -------- ------ --------------
+127.0.0.1.5999      
+      *.*                  0 00000000 00000000  256000 00000000 00000000  1125   536 LISTEN      root        142 /lib/inet/in.mpathd
+127.0.0.1.4999      
+      *.*                  0 00000000 00000000  256000 00000000 00000000  1125   536 LISTEN      netadm      568 /usr/sbin/dhcpagent
+      *.22          
+      *.*                  0 00000000 00000000  256000 00000000 00000000  1125   536 LISTEN      root        637 /usr/lib/ssh/sshd
+10.0.2.15.22        
+10.0.2.2.50634         65535 5e7ba69c 5e7ba69c   64240 14e9c62b 14e9c62b   200  1460 ESTABLISHED root        637 /usr/lib/ssh/sshd
+      *.111         
+      *.*                  0 00000000 00000000  256000 00000000 00000000  1125  1220 LISTEN      daemon     1246 /usr/sbin/rpcbind -w
+      *.*           
+      *.*                  0 00000000 00000000  256000 00000000 00000000  1125  1220 IDLE        daemon     1246 /usr/sbin/rpcbind -w
+      *.111         
+      *.*                  0 00000000 00000000  256000 00000000 00000000  1125   536 LISTEN      daemon     1246 /usr/sbin/rpcbind -w
+      *.*           
+      *.*                  0 00000000 00000000  256000 00000000 00000000  1125   536 IDLE        daemon     1246 /usr/sbin/rpcbind -w
+      *.6787        
+      *.*                  0 00000000 00000000  256000 00000000 00000000  1125  1220 LISTEN      root       1348 /usr/apache2/2.4/bin/httpd -f /var/webui/conf/webui.conf -k start
+      *.*           
+      *.*                  0 00000000 00000000  256000 00000000 00000000  1125   536 IDLE        root       1329 
+127.0.0.1.25        
+      *.*                  0 00000000 00000000  256000 00000000 00000000  1125   536 LISTEN      root       1570 /usr/lib/inet/sendmail -bl -q15m
+127.0.0.1.587       
+      *.*                  0 00000000 00000000  256000 00000000 00000000  1125   536 LISTEN      root       1570 /usr/lib/inet/sendmail -bl -q15m
+      *.*           
+      *.*                  0 00000000 00000000  256000 00000000 00000000  1125  1220 IDLE        wlsadmin  14366 /usr/java/bin/java -server -d64 -Xms256m -Xmx512m -cp /u01/oracle/middleware12c
+      *.*           
+      *.*                  0 00000000 00000000  256000 00000000 00000000  1125  1220 IDLE        wlsadmin  14366 /usr/java/bin/java -server -d64 -Xms256m -Xmx512m -cp /u01/oracle/middleware12c
 
 TCP: IPv6
-   Local Address                     Remote Address                  Swind  Send-Q  Rwind  Recv-Q   State      If
---------------------------------- --------------------------------- ------- ------ ------- ------ ----------- -----
-::1.5999                                *.*                               0      0  128000      0 LISTEN
-      *.111                             *.*                               0      0  128000      0 LISTEN
-      *.*                               *.*                               0      0  128000      0 IDLE
+Local/Remote Address               Swind   Snext     Suna    Rwind   Rnext     Rack    Rto   Mss    State      If     User    Pid     Command
+--------------------------------- ------- -------- -------- ------- -------- -------- ----- ----- ----------- ----- -------- ------ --------------
+::1.5999                         
+      *.*                               0 00000000 00000000  256000 00000000 00000000  1125  1220 LISTEN            root        142 /lib/inet/in.mpathd
+      *.22                       
+      *.*                               0 00000000 00000000  256000 00000000 00000000  1125  1220 LISTEN            root        637 /usr/lib/ssh/sshd
+      *.111                      
+      *.*                               0 00000000 00000000  256000 00000000 00000000  1125  1220 LISTEN            daemon     1246 /usr/sbin/rpcbind -w
+      *.*                        
+      *.*                               0 00000000 00000000  256000 00000000 00000000  1125  1220 IDLE              daemon     1246 /usr/sbin/rpcbind -w
+      *.6787                     
+      *.*                               0 00000000 00000000  256000 00000000 00000000  1125  1220 LISTEN            root       1348 /usr/apache2/2.4/bin/httpd -f /var/webui/conf/webui.conf -k start
+::1.25                           
+      *.*                               0 00000000 00000000  256000 00000000 00000000  1125  1220 LISTEN            root       1570 /usr/lib/inet/sendmail -bl -q15m
+::ffff:127.0.0.1.5556            
+      *.*                               0 00000000 00000000  256000 00000000 00000000  1125  1220 LISTEN            wlsadmin  14254 /usr/java/bin/java -server -d64 -Xms32m -Xmx200m -Djdk.tls.ephemeralDHKeySize=2
+::ffff:127.0.0.1.1527            
+      *.*                               0 00000000 00000000  256000 00000000 00000000  1125  1220 LISTEN            wlsadmin  14365 /usr/java/bin/java -Dderby.system.home=/u01/oracle/wlsdomains/domains/fcubs_dom
+::1.37050                        
+      *.*                               0 00000000 00000000  256200 00000000 00000000  1125  1220 LISTEN            wlsadmin  14366 /usr/java/bin/java -server -d64 -Xms256m -Xmx512m -cp /u01/oracle/middleware12c
+      *.*                        
+      *.*                               0 00000000 00000000  256000 00000000 00000000  1125  1220 IDLE              wlsadmin  14366 /usr/java/bin/java -server -d64 -Xms256m -Xmx512m -cp /u01/oracle/middleware12c
+::ffff:10.0.2.15.37050           
+      *.*                               0 00000000 00000000  256200 00000000 00000000  1125  1220 LISTEN            wlsadmin  14366 /usr/java/bin/java -server -d64 -Xms256m -Xmx512m -cp /u01/oracle/middleware12c
+::ffff:127.0.0.1.37050           
+      *.*                               0 00000000 00000000  256200 00000000 00000000  1125  1220 LISTEN            wlsadmin  14366 /usr/java/bin/java -server -d64 -Xms256m -Xmx512m -cp /u01/oracle/middleware12c
+::ffff:192.168.33.33.37050       
+      *.*                               0 00000000 00000000  256200 00000000 00000000  1125  1220 LISTEN            wlsadmin  14366 /usr/java/bin/java -server -d64 -Xms256m -Xmx512m -cp /u01/oracle/middleware12c
+fe80::a00:27ff:fee0:70b4.37050   
+      *.*                               0 00000000 00000000  256200 00000000 00000000  1125  1220 LISTEN      net0  wlsadmin  14366 /usr/java/bin/java -server -d64 -Xms256m -Xmx512m -cp /u01/oracle/middleware12c
+::1.7574                         
+      *.*                               0 00000000 00000000  256200 00000000 00000000  1125  1220 LISTEN            wlsadmin  14366 /usr/java/bin/java -server -d64 -Xms256m -Xmx512m -cp /u01/oracle/middleware12c
+      *.*                        
+      *.*                               0 00000000 00000000  256000 00000000 00000000  1125  1220 IDLE              wlsadmin  14366 /usr/java/bin/java -server -d64 -Xms256m -Xmx512m -cp /u01/oracle/middleware12c
+::ffff:10.0.2.15.7574            
+      *.*                               0 00000000 00000000  256200 00000000 00000000  1125  1220 LISTEN            wlsadmin  14366 /usr/java/bin/java -server -d64 -Xms256m -Xmx512m -cp /u01/oracle/middleware12c
+::ffff:127.0.0.1.7574            
+      *.*                               0 00000000 00000000  256200 00000000 00000000  1125  1220 LISTEN            wlsadmin  14366 /usr/java/bin/java -server -d64 -Xms256m -Xmx512m -cp /u01/oracle/middleware12c
+::ffff:192.168.33.33.7574        
+      *.*                               0 00000000 00000000  256200 00000000 00000000  1125  1220 LISTEN            wlsadmin  14366 /usr/java/bin/java -server -d64 -Xms256m -Xmx512m -cp /u01/oracle/middleware12c
+fe80::a00:27ff:fee0:70b4.7574    
+      *.*                               0 00000000 00000000  256200 00000000 00000000  1125  1220 LISTEN      net0  wlsadmin  14366 /usr/java/bin/java -server -d64 -Xms256m -Xmx512m -cp /u01/oracle/middleware12c
+::ffff:127.0.0.1.7001            
+      *.*                               0 00000000 00000000  256000 00000000 00000000  1125  1220 LISTEN            wlsadmin  14366 /usr/java/bin/java -server -d64 -Xms256m -Xmx512m -cp /u01/oracle/middleware12c
+::ffff:10.0.2.15.7001            
+      *.*                               0 00000000 00000000  256000 00000000 00000000  1125  1220 LISTEN            wlsadmin  14366 /usr/java/bin/java -server -d64 -Xms256m -Xmx512m -cp /u01/oracle/middleware12c
+::ffff:192.168.33.33.7001        
+      *.*                               0 00000000 00000000  256000 00000000 00000000  1125  1220 LISTEN            wlsadmin  14366 /usr/java/bin/java -server -d64 -Xms256m -Xmx512m -cp /u01/oracle/middleware12c
+::1.7001                         
+      *.*                               0 00000000 00000000  256000 00000000 00000000  1125  1220 LISTEN            wlsadmin  14366 /usr/java/bin/java -server -d64 -Xms256m -Xmx512m -cp /u01/oracle/middleware12c
