@@ -707,7 +707,7 @@ module Inspec::Resources
 
     def info
       # extract all port info
-      cmd = inspec.command("netstat -aunv -f inet -f inet6")
+      cmd = inspec.command("netstat -an -f inet -f inet6")
       return nil if cmd.exit_status.to_i != 0
 
       # parse the content
@@ -721,8 +721,6 @@ module Inspec::Resources
       # map the data
       ports = listen.map do |val|
         protocol = val["protocol"]
-        pid = val["Pid"]
-        process = val["Command"]
         local_addr = val["local-address"]
 
         # solaris uses 127.0.0.1.57455 instead 127.0.0.1:57455, lets convert the
@@ -736,8 +734,6 @@ module Inspec::Resources
             "port" => port,
             "address" => host,
             "protocol" => protocol,
-            "process" => process,
-            "pid" => pid,
           }
         end
       end
