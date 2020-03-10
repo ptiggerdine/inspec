@@ -85,6 +85,7 @@ module Inspec::Resources
     end
 
     # returns the Manufacturer of the local system
+
     def manufacturer
       os = inspec.os
       if os.darwin?
